@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="Kartlegging.Test/Kartlegging.Test.csproj" />
+  <Project Path="Kartlegging/Kartlegging.csproj" />
+</Solution>
