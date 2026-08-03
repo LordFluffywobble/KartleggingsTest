@@ -9,6 +9,6 @@ public class LvL
 
     public int AddOneXp()   => 1;
 
-    public int AddXp(int a) => throw new NotImplementedException();
+    public int AddXp(int a) => a >= 10 ? level + 1 : level;
  
 }
