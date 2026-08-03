@@ -16,7 +16,7 @@ public class UnitTest1
     public void LvlTwo()
     {
         var lvl = new LvL();
-        var addLvl = lvl.AddLvl();
-        Assert.True(addLvl >= 10);
-    }
+        var addLvl = lvl.AddXp(10);
+        Assert.Equal(2, addLvl);
+    }    
 }

@@ -5,13 +5,10 @@ namespace Kartleggingstest;
 
 public class LvL
 {
-    public int AddOneXp()
-    {
-        return 1;
-    }
+    int level = 1;
 
-    public int AddLvl()
-    {
-        return 10;
-    }
+    public int AddOneXp()   => 1;
+
+    public int AddXp(int a) => throw new NotImplementedException();
+ 
 }
