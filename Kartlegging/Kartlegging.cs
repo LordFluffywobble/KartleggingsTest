@@ -1,12 +1,11 @@
 using System.Reflection;
+using System.Security.Cryptography.X509Certificates;
+using System.Xml.XPath;
+using Kartleggingstest.Classes;
 
 namespace Kartleggingstest;
 
-
-public class LvL
+public class Leveling
 {
-    int level = 1;
-
-    public int AddXp(int a) => a >= 10 ? level + 1 : level;
- 
+    public int AddXp(Player player, int xp)  => xp >= 10 ? player.Level + 1 : player.Level;
 }

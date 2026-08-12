@@ -1,4 +1,6 @@
 ﻿using Kartleggingstest;
+using Kartlegging;
+using Kartleggingstest.Classes;
 
 namespace Kartlegging.Test;
 
@@ -7,13 +9,17 @@ public class UnitTest1
     [Fact]
     public void AddXpTest()
     {
-        var lvl = new LvL();
-        var addNoLvl    = lvl.AddXp(5);
-        var addLvl      = lvl.AddXp(10);
-        var addLvlAndXp = lvl.AddXp(15);
+        // var player1 = new Player("Player 1", 1, 0);
+        var player2 = new Player("Player 2", 4, 0);
 
-        Assert.NotEqual (2, addNoLvl);
-        Assert.Equal    (2, addLvl);
-        Assert.Equal    (2, addLvlAndXp);
+    
+        var lvl = new Leveling();
+        var addNoLvl    = lvl.AddXp(player2, 5);
+        var addLvl      = lvl.AddXp(player2, 10);
+        var addLvlAndXp = lvl.AddXp(player2, 15);
+
+        Assert.NotEqual (5, addNoLvl);
+        Assert.Equal    (5, addLvl);
+        Assert.Equal    (5, addLvlAndXp);
     }    
 }
