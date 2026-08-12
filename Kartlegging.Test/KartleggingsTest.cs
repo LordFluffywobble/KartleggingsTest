@@ -7,19 +7,48 @@ namespace Kartlegging.Test;
 public class UnitTest1
 {
     [Fact]
-    public void AddXpTest()
-    {
-        // var player1 = new Player("Player 1", 1, 0);
-        var player2 = new Player("Player 2", 4, 0);
+    // public void AddXpTest()
+    // {
+    //     // var player1 = new Player("Player 1", 1, 0);
+    //     var player2 = new Player("Player 2", 4, 0);
 
     
+    //     var lvl = new Leveling();
+    //     var addNoLvl    = lvl.AddXp(player2, 5);
+    //     var addLvl      = lvl.AddXp(player2, 10);
+    //     var addLvlAndXp = lvl.AddXp(player2, 15);
+
+    //     Assert.NotEqual (5, addNoLvl);
+    //     Assert.Equal    (5, addLvl);
+    //     Assert.Equal    (5, addLvlAndXp);
+    // }    
+
+    public void TestPlayer1()
+    {
+        var player1 = new Player("player1", 1, 0);
         var lvl = new Leveling();
+
+        var addNoLvl    = lvl.AddXp(player1, 5);
+        var addLvl      = lvl.AddXp(player1, 10);
+        var addLvlAndXp = lvl.AddXp(player1, 15);
+
+        Assert.Equal    (1, addNoLvl);
+        Assert.Equal    (2, addLvl);
+        Assert.Equal    (2, addLvlAndXp);
+    }
+
+    [Fact]
+    public void TestPlayer2()
+    {
+        var player2 = new Player("player1", 4, 0);
+        var lvl = new Leveling();
+
         var addNoLvl    = lvl.AddXp(player2, 5);
         var addLvl      = lvl.AddXp(player2, 10);
         var addLvlAndXp = lvl.AddXp(player2, 15);
 
-        Assert.NotEqual (5, addNoLvl);
-        Assert.Equal    (5, addLvl);
-        Assert.Equal    (5, addLvlAndXp);
-    }    
+        Assert.Equal    (1, addNoLvl);
+        Assert.Equal    (2, addLvl);
+        Assert.Equal    (2, addLvlAndXp);
+    }
 }
