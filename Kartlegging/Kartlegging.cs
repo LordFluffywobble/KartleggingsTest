@@ -1,6 +1,3 @@
-using System.Reflection;
-using System.Security.Cryptography.X509Certificates;
-using System.Xml.XPath;
 using Kartleggingstest.Classes;
 
 namespace Kartleggingstest;

@@ -1,5 +1,4 @@
 ﻿using Kartleggingstest;
-using Kartlegging;
 using Kartleggingstest.Classes;
 
 namespace Kartlegging.Test;
