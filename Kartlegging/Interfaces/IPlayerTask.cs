@@ -6,5 +6,5 @@ public interface IPlayerTask
     string PlayerName {get;set;}
     int Level {get;set;}
     int Xp {get;set;}
-    bool GetLevelUp();
+    bool TriggerLevelUp();
 }
